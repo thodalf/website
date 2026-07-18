@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Linerve — Studio de création</title>
+  <meta name="description" content="Linerve est un studio de création indépendant : jeux vidéo, musique et expériences sur-mesure. Découvrez Charta Logica, jeu de cartes tactique en ligne, et Lia Dadaz Fire, projet musical électronique." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://linereve.com/" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Linerve" />
+  <meta property="og:title" content="Linerve — Studio de création" />
+  <meta property="og:description" content="Jeux, musique, univers sur-mesure. Découvrez Charta Logica et Lia Dadaz Fire." />
+  <meta property="og:url" content="https://linereve.com/" />
+  <meta property="og:image" content="assets/charta/icon-512.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Linerve — Studio de création" />
+  <meta name="twitter:description" content="Jeux, musique, univers sur-mesure. Découvrez Charta Logica et Lia Dadaz Fire." />
+
+  <meta name="theme-color" content="#05050a" />
+  <link rel="icon" type="image/png" href="assets/charta/icon-512.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Cinzel:wght@500;600;700&family=Cinzel+Decorative:wght@700;900&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
+  <div class="noise-overlay" aria-hidden="true"></div>
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+  <header class="nav" id="siteNav">
+    <a href="#top" class="nav__brand">LINERVE</a>
+    <nav class="nav__links" id="navLinks">
+      <a href="#univers">Univers</a>
+      <a href="#charta-logica">Charta Logica</a>
+      <a href="#lia-dadaz-fire">Lia Dadaz Fire</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <button class="nav__toggle" id="navToggle" aria-label="Ouvrir le menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <main id="top">
+
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="hero">
+      <div class="hero__bg" aria-hidden="true">
+        <div class="hero__blob hero__blob--a"></div>
+        <div class="hero__blob hero__blob--b"></div>
+        <div class="hero__grid"></div>
+      </div>
+
+      <div class="hero__content">
+        <p class="hero__kicker reveal" data-reveal>Studio de création</p>
+        <h1 class="hero__title" data-glitch="LINERVE">
+          <span class="hero__title-inner">LINERVE</span>
+        </h1>
+        <p class="hero__tagline reveal" data-reveal>
+          On conçoit des jeux. On compose de la musique.<br class="hero__br" />
+          On construit des univers qu'on n'oublie pas.
+        </p>
+        <div class="hero__cta reveal" data-reveal>
+          <a href="#charta-logica" class="btn btn--ghost">Découvrir nos créations</a>
+          <a href="#contact" class="btn btn--outline">Nous contacter</a>
+        </div>
+      </div>
+
+      <div class="hero__scroll" aria-hidden="true">
+        <span></span>
+        <p>Scroll</p>
+      </div>
+    </section>
+
+    <!-- ============ MARQUEE ============ -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__track">
+        <span>JEUX&nbsp;VIDÉO</span><span>•</span>
+        <span>MUSIQUE</span><span>•</span>
+        <span>DIRECTION&nbsp;ARTISTIQUE</span><span>•</span>
+        <span>UNIVERS&nbsp;SUR-MESURE</span><span>•</span>
+        <span>JEUX&nbsp;VIDÉO</span><span>•</span>
+        <span>MUSIQUE</span><span>•</span>
+        <span>DIRECTION&nbsp;ARTISTIQUE</span><span>•</span>
+        <span>UNIVERS&nbsp;SUR-MESURE</span><span>•</span>
+      </div>
+    </div>
+
+    <!-- ============ MANIFESTE ============ -->
+    <section class="manifesto" id="univers">
+      <div class="section-inner">
+        <p class="eyebrow reveal" data-reveal>Le studio</p>
+        <h2 class="manifesto__title reveal" data-reveal>
+          Une seule équipe.<br />Plusieurs formes de création.
+        </h2>
+        <p class="manifesto__text reveal" data-reveal>
+          Linerve est un studio de création indépendant. On ne s'enferme pas dans un seul médium :
+          on prototype des jeux, on écrit et produit de la musique, on soigne chaque détail visuel —
+          parce qu'un univers convaincant se construit à l'intersection de tout ça.
+        </p>
+
+        <div class="pillars">
+          <div class="pillar reveal" data-reveal>
+            <span class="pillar__num">01</span>
+            <h3>Jeux</h3>
+            <p>Des systèmes de jeu pensés pour la tension et la rejouabilité — du prototype au multijoueur en ligne.</p>
+          </div>
+          <div class="pillar reveal" data-reveal>
+            <span class="pillar__num">02</span>
+            <h3>Musique</h3>
+            <p>Des compositions électroniques et des identités sonores, du projet solo à la bande-son de jeu.</p>
+          </div>
+          <div class="pillar reveal" data-reveal>
+            <span class="pillar__num">03</span>
+            <h3>Sur-mesure</h3>
+            <p>Direction artistique, identité de marque, expériences interactives — sur demande.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CHARTA LOGICA ============ -->
+    <section class="showcase showcase--charta" id="charta-logica">
+      <div class="showcase__bg" style="background-image:url('assets/charta/plateau.jpg')" aria-hidden="true"></div>
+      <div class="showcase__scrim" aria-hidden="true"></div>
+
+      <div class="section-inner showcase__inner">
+        <div class="showcase__text">
+          <p class="eyebrow eyebrow--gold reveal" data-reveal>Jeu de cartes tactique</p>
+          <h2 class="showcase__title showcase__title--charta reveal" data-reveal>Charta Logica</h2>
+          <p class="showcase__desc reveal" data-reveal>
+            Un plateau 5×5, deux camps, un seul vainqueur. Charta Logica est un jeu de cartes
+            tactique gratuit inspiré des duels de territoire : construisez votre deck, ouvrez des
+            boosters chaque jour, puis affrontez l'IA ou d'autres joueurs en ligne — directement
+            dans votre navigateur, sans rien installer.
+          </p>
+
+          <ul class="chip-list reveal" data-reveal>
+            <li class="chip chip--gold">Gratuit</li>
+            <li class="chip chip--gold">Multijoueur en ligne</li>
+            <li class="chip chip--gold">Deck-building</li>
+            <li class="chip chip--gold">Boosters quotidiens</li>
+          </ul>
+
+          <div class="reveal" data-reveal>
+            <a href="https://chartalogica.linereve.com" target="_blank" rel="noopener" class="btn btn--gold">
+              Jouer à Charta Logica
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 12L12 4M12 4H5M12 4V11" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="card-stack reveal" data-reveal>
+          <img class="card-stack__item card-stack__item--1" src="assets/charta/dragon.jpg" alt="Carte Dragon — Charta Logica" loading="lazy" />
+          <img class="card-stack__item card-stack__item--2" src="assets/charta/roi.jpg" alt="Carte Roi — Charta Logica" loading="lazy" />
+          <img class="card-stack__item card-stack__item--3" src="assets/charta/elf.jpg" alt="Carte Elfe — Charta Logica" loading="lazy" />
+          <img class="card-stack__item card-stack__item--4" src="assets/charta/orc.jpg" alt="Carte Orc — Charta Logica" loading="lazy" />
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ LIA DADAZ FIRE ============ -->
+    <section class="showcase showcase--music" id="lia-dadaz-fire">
+      <div class="showcase__bg showcase__bg--static" aria-hidden="true"></div>
+
+      <div class="section-inner showcase__inner showcase__inner--reverse">
+        <div class="album">
+          <div class="album__glow" aria-hidden="true"></div>
+          <img class="album__cover reveal" data-reveal src="assets/music/defragmented.jpg" alt="Pochette de l'album Defragmented — Lia Dadaz Fire" loading="lazy" />
+          <div class="eq" aria-hidden="true">
+            <span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+          </div>
+        </div>
+
+        <div class="showcase__text">
+          <p class="eyebrow eyebrow--glitch reveal" data-reveal>Projet musical</p>
+          <h2 class="showcase__title showcase__title--music reveal" data-reveal data-text="Lia Dadaz Fire">Lia Dadaz Fire</h2>
+          <p class="showcase__desc reveal" data-reveal>
+            Lia Dadaz Fire est le projet musical de Linerve — une écriture électronique entre
+            fracture et reconstruction. Le dernier album, <em>Defragmented</em>, explore la mémoire
+            numérique et l'identité recomposée, piste après piste : des textures glitch, des lignes
+            de basse denses, une voix qui se recompose au fil de l'écoute.
+          </p>
+
+          <ul class="chip-list reveal" data-reveal>
+            <li class="chip chip--glitch">Électronique</li>
+            <li class="chip chip--glitch">Album — Defragmented</li>
+            <li class="chip chip--glitch">Disponible sur Spotify</li>
+          </ul>
+
+          <div class="reveal" data-reveal>
+            <a href="https://open.spotify.com/search/Lia%20Dadaz%20Fire" target="_blank" rel="noopener" class="btn btn--glitch">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.586 14.424a.622.622 0 0 1-.857.207c-2.348-1.435-5.304-1.76-8.785-.964a.622.622 0 1 1-.277-1.215c3.809-.871 7.077-.496 9.712 1.115a.623.623 0 0 1 .207.857zm1.223-2.723a.78.78 0 0 1-1.072.257c-2.688-1.652-6.786-2.13-9.965-1.166a.78.78 0 1 1-.452-1.492c3.632-1.102 8.147-.568 11.232 1.329a.78.78 0 0 1 .257 1.072zm.105-2.835C14.692 9.01 9.375 8.834 6.297 9.764a.936.936 0 1 1-.542-1.79c3.533-1.072 9.404-.865 13.115 1.338a.936.936 0 0 1-.956 1.612z"/></svg>
+              Écouter sur Spotify
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section class="contact" id="contact">
+      <div class="section-inner">
+        <p class="eyebrow reveal" data-reveal>Un projet en tête ?</p>
+        <h2 class="contact__title reveal" data-reveal>Créons quelque chose ensemble.</h2>
+        <a href="mailto:contact@linerve.studio" class="contact__email reveal" data-reveal>contact@linerve.studio</a>
+
+        <div class="contact__socials reveal" data-reveal>
+          <a href="https://chartalogica.linereve.com" target="_blank" rel="noopener">Charta Logica</a>
+          <a href="https://open.spotify.com/search/Lia%20Dadaz%20Fire" target="_blank" rel="noopener">Spotify</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="section-inner footer__inner">
+      <span>© <span id="year"></span> Linerve — Tous droits réservés.</span>
+      <a href="#top">Remonter ↑</a>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
