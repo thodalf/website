@@ -378,6 +378,46 @@ button { font: inherit; cursor: pointer; }
 .eq span:nth-child(7){height:75%;animation-delay:0s}
 @keyframes eq { 0%,100%{ transform: scaleY(.4);} 50%{ transform: scaleY(1);} }
 
+/* ============ CV ============ */
+.cv { padding: clamp(90px, 14vw, 160px) 0; }
+.cv__inner { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(30px, 6vw, 70px); align-items: start; }
+
+.cv__title {
+  font-size: clamp(2.1rem, 5vw, 3.2rem); font-weight: 700; margin-bottom: 8px;
+  background: linear-gradient(120deg, #fff 20%, var(--cyan), var(--violet), #fff 80%);
+  background-size: 300% auto; -webkit-background-clip: text; background-clip: text; color: transparent;
+  animation: shine 8s linear infinite;
+}
+.cv__role { color: var(--ink-dim); font-size: 1.05rem; margin-bottom: 22px; }
+.cv__desc { color: var(--ink-dim); line-height: 1.75; max-width: 520px; margin-bottom: 26px; }
+.cv__desc a { color: var(--cyan); text-decoration: underline; text-underline-offset: 3px; }
+
+.chip--cv { color: #cdb8fb; border-color: rgba(168,85,247,.4); background: rgba(168,85,247,.08); }
+
+.cv__langs {
+  font-family: 'JetBrains Mono', monospace; font-size: .8rem; letter-spacing: .04em;
+  color: var(--ink-dim); margin: 22px 0 28px;
+}
+
+.cv__links { display: flex; flex-wrap: wrap; gap: 12px; }
+.cv__links .btn { padding: 12px 22px; font-size: .88rem; }
+
+.cv__timeline { border-left: 2px solid rgba(168,85,247,.35); display: flex; flex-direction: column; gap: 28px; padding-left: 30px; }
+.cv__job { position: relative; }
+.cv__job::before {
+  content: ''; position: absolute; left: -35px; top: 5px;
+  width: 9px; height: 9px; border-radius: 50%;
+  background: var(--cyan); box-shadow: 0 0 0 4px rgba(34,211,238,.15);
+}
+.cv__job-period {
+  display: block; font-family: 'JetBrains Mono', monospace; font-size: .7rem;
+  letter-spacing: .08em; text-transform: uppercase; color: var(--cyan); margin-bottom: 6px;
+}
+.cv__job h3 { font-size: 1.05rem; font-weight: 600; margin: 0 0 4px; }
+.cv__job p { color: var(--ink-dim); font-size: .9rem; line-height: 1.55; }
+.cv__job--formation { padding-top: 22px; border-top: 1px dashed rgba(255,255,255,.14); }
+.cv__job--formation::before { background: var(--violet); box-shadow: 0 0 0 4px rgba(168,85,247,.15); }
+
 /* ============ CONTACT ============ */
 .contact { padding: clamp(90px, 16vw, 180px) 0; text-align: center; position: relative; }
 .contact__title { font-size: clamp(2rem, 5vw, 3.4rem); font-weight: 600; margin-bottom: 30px; }
@@ -404,6 +444,8 @@ button { font: inherit; cursor: pointer; }
   .showcase__inner--reverse .showcase__text { order: 2; }
   .card-stack { margin-top: 20px; }
   .pillars { grid-template-columns: 1fr; }
+  .cv__inner { grid-template-columns: 1fr; }
+  .cv__timeline { margin-top: 10px; }
 }
 
 @media (max-width: 720px) {
