@@ -200,54 +200,37 @@ button { font: inherit; cursor: pointer; }
 .btn--glitch { background: linear-gradient(120deg, var(--glitch-red), var(--glitch-blue)); color: #fff; }
 .btn--glitch:hover { box-shadow: 0 14px 32px -10px rgba(255,59,48,.5); }
 
-/* ============ MINI-JEU (dans le hero, visible sans scroller) ============ */
-.minigame { position: relative; z-index: 1; width: 100%; display: flex; justify-content: center; margin-top: 30px; }
+/* ============ MINI-JEU (dans le hero, pleine largeur, visible sans scroller) ============ */
+.minigame { position: relative; z-index: 1; width: 100%; padding-top: 40px; }
 
 .minigame__frame {
-  position: relative; width: 100%; max-width: 620px;
+  position: relative; width: 100%;
   border-radius: 16px; border: 1px solid rgba(255,255,255,.12);
   background: linear-gradient(180deg, rgba(168,85,247,.09), rgba(34,211,238,.03));
-  padding: 12px; backdrop-filter: blur(6px);
+  padding: 16px; backdrop-filter: blur(6px);
   box-shadow: 0 25px 55px -28px rgba(0,0,0,.75);
 }
 .minigame__hud {
   display: flex; justify-content: space-between;
-  font-family: 'JetBrains Mono', monospace; font-size: .7rem; letter-spacing: .1em;
-  color: var(--ink-dim); padding: 0 5px 8px;
+  font-family: 'JetBrains Mono', monospace; font-size: .74rem; letter-spacing: .12em;
+  color: var(--ink-dim); padding: 0 6px 10px;
 }
-.minigame__hud strong { color: var(--cyan); font-size: .86rem; }
+.minigame__hud strong { color: var(--cyan); font-size: .9rem; }
 
 #runnerCanvas {
-  display: block; width: 100%; height: 150px; border-radius: 10px;
+  display: block; width: 100%; height: clamp(130px, 22vw, 190px); border-radius: 10px;
   background: linear-gradient(180deg, rgba(10,10,18,.9), rgba(5,5,10,.95));
   touch-action: manipulation;
 }
 
-/* Bouton "arcade" : icône ronde pulsante + libellé, plutôt qu'un simple pavé plein */
+/* Bouton cohérent avec les CTA du site : réutilise .btn / .btn--ghost */
 .minigame__play {
-  position: absolute; inset: 8px 8px auto 8px; top: 30px; bottom: 8px;
-  display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px;
-  background: rgba(5,5,10,.62); border: none; border-radius: 10px; cursor: pointer;
+  position: absolute; inset: 40px 0 0 0;
+  display: flex; align-items: center; justify-content: center;
+  background: rgba(5,5,10,.5); border: none; border-radius: 0 0 10px 10px; cursor: pointer;
   transition: opacity .3s ease, visibility .3s ease, background .3s ease;
 }
-.minigame__play:hover { background: rgba(5,5,10,.4); }
-.minigame__play-icon {
-  display: flex; align-items: center; justify-content: center;
-  width: 54px; height: 54px; border-radius: 50%;
-  background: linear-gradient(135deg, var(--violet), var(--cyan)); color: #05050a;
-  transition: transform .25s ease;
-  animation: playPulse 2.2s ease-in-out infinite;
-}
-.minigame__play-icon svg { margin-left: 2px; }
-.minigame__play:hover .minigame__play-icon { transform: scale(1.1); }
-@keyframes playPulse {
-  0%, 100% { box-shadow: 0 0 0 0 rgba(168,85,247,.5); }
-  50% { box-shadow: 0 0 0 12px rgba(168,85,247,0); }
-}
-.minigame__play span:last-child {
-  font-family: 'JetBrains Mono', monospace; font-size: .72rem; letter-spacing: .18em;
-  text-transform: uppercase; color: #fff;
-}
+.minigame__play:hover { background: rgba(5,5,10,.32); }
 .minigame__play.is-hidden { opacity: 0; visibility: hidden; pointer-events: none; }
 
 /* ============ MARQUEE ============ */

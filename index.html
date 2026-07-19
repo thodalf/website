@@ -95,8 +95,10 @@
           <a href="#charta-logica" class="btn btn--ghost">Découvrir nos créations</a>
           <a href="#contact" class="btn btn--outline">Nous contacter</a>
         </div>
+      </div>
 
-        <div class="minigame reveal" id="minigame" data-reveal>
+      <div class="minigame" id="minigame">
+        <div class="section-inner">
           <div class="minigame__frame">
             <div class="minigame__hud">
               <span>SCORE <strong id="runnerScore">0</strong></span>
@@ -104,10 +106,7 @@
             </div>
             <canvas id="runnerCanvas" aria-label="Mini-jeu : runner Linerve" role="img"></canvas>
             <button class="minigame__play" id="runnerOverlay" type="button">
-              <span class="minigame__play-icon" aria-hidden="true">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
-              </span>
-              <span id="runnerOverlayText">Jouer</span>
+              <span class="btn btn--ghost" id="runnerOverlayText">Jouer</span>
             </button>
           </div>
         </div>
