@@ -106,7 +106,7 @@ button { font: inherit; cursor: pointer; }
 
 /* ============ HERO ============ */
 .hero {
-  position: relative; min-height: 100svh; display: flex; flex-direction: column;
+  position: relative; isolation: isolate; min-height: 100svh; display: flex; flex-direction: column;
   align-items: center; justify-content: center; text-align: center;
   padding: 100px 20px 40px; overflow: hidden;
 }
@@ -114,6 +114,7 @@ button { font: inherit; cursor: pointer; }
 .hero__blob {
   position: absolute; border-radius: 50%; filter: blur(90px); opacity: .55;
   animation: float 16s ease-in-out infinite;
+  pointer-events: none;
 }
 .hero__blob--a { width: 560px; height: 560px; top: -180px; left: -140px; background: radial-gradient(circle, var(--violet), transparent 70%); }
 .hero__blob--b { width: 500px; height: 500px; bottom: -200px; right: -140px; background: radial-gradient(circle, var(--cyan), transparent 70%); animation-delay: -8s; }
@@ -122,7 +123,7 @@ button { font: inherit; cursor: pointer; }
   50% { transform: translate(40px, -30px) scale(1.08); }
 }
 .hero__grid {
-  position: absolute; inset: 0;
+  position: absolute; inset: 0; pointer-events: none;
   background-image: linear-gradient(rgba(255,255,255,.04) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.04) 1px, transparent 1px);
   background-size: 56px 56px;
   mask-image: radial-gradient(ellipse 70% 60% at 50% 40%, #000 30%, transparent 80%);
@@ -203,19 +204,19 @@ button { font: inherit; cursor: pointer; }
 .btn--glitch:hover { box-shadow: 0 14px 32px -10px rgba(255,59,48,.5); }
 
 /* ============ MINI-JEU (dans le hero, pleine largeur, visible sans scroller) ============ */
-.minigame { position: relative; z-index: 1; width: 100%; padding-top: 40px; }
+.minigame { position: relative; z-index: 5; width: 100%; padding-top: 64px; }
 
 .minigame__frame {
   position: relative; width: 100%;
   border-radius: 16px; border: 1px solid rgba(255,255,255,.12);
   background: linear-gradient(180deg, rgba(168,85,247,.09), rgba(34,211,238,.03));
-  padding: 16px; backdrop-filter: blur(6px);
+  padding: 18px; backdrop-filter: blur(6px);
   box-shadow: 0 25px 55px -28px rgba(0,0,0,.75);
 }
 .minigame__hud {
   display: flex; justify-content: space-between;
   font-family: 'JetBrains Mono', monospace; font-size: .74rem; letter-spacing: .12em;
-  color: var(--ink-dim); padding: 0 6px 10px;
+  color: var(--ink-dim); padding: 0 6px 16px;
 }
 .minigame__hud strong { color: var(--cyan); font-size: .9rem; }
 
@@ -227,7 +228,7 @@ button { font: inherit; cursor: pointer; }
 
 /* Bouton cohérent avec les CTA du site : réutilise .btn / .btn--ghost */
 .minigame__play {
-  position: absolute; inset: 40px 0 0 0;
+  position: absolute; inset: 48px 0 0 0; z-index: 1;
   display: flex; align-items: center; justify-content: center;
   background: rgba(5,5,10,.5); border: none; border-radius: 0 0 10px 10px; cursor: pointer;
   transition: opacity .3s ease, visibility .3s ease, background .3s ease;
