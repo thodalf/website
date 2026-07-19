@@ -183,7 +183,7 @@
         localStorage.setItem(BEST_KEY, String(best));
         bestEl.textContent = best;
       }
-      overlayText.textContent = `Score ${finalScore} — Espace pour rejouer`;
+      overlayText.textContent = `Rejouer (${finalScore})`;
       overlay.classList.remove('is-hidden');
       beep(140, 0.25, 'sawtooth');
     }

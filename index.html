@@ -95,33 +95,27 @@
           <a href="#charta-logica" class="btn btn--ghost">Découvrir nos créations</a>
           <a href="#contact" class="btn btn--outline">Nous contacter</a>
         </div>
+
+        <div class="minigame reveal" id="minigame" data-reveal>
+          <div class="minigame__frame">
+            <div class="minigame__hud">
+              <span>SCORE <strong id="runnerScore">0</strong></span>
+              <span>RECORD <strong id="runnerBest">0</strong></span>
+            </div>
+            <canvas id="runnerCanvas" aria-label="Mini-jeu : runner Linerve" role="img"></canvas>
+            <button class="minigame__play" id="runnerOverlay" type="button">
+              <span class="minigame__play-icon" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+              </span>
+              <span id="runnerOverlayText">Jouer</span>
+            </button>
+          </div>
+        </div>
       </div>
 
       <div class="hero__scroll" aria-hidden="true">
         <span></span>
         <p>Scroll</p>
-      </div>
-    </section>
-
-    <!-- ============ MINI-JEU ============ -->
-    <section class="minigame" id="minigame">
-      <div class="section-inner minigame__inner">
-        <div class="minigame__intro reveal" data-reveal>
-          <p class="eyebrow">Pendant que vous êtes là</p>
-          <h2 class="minigame__title">Un petit runner, pour la route.</h2>
-          <p class="minigame__desc">Un clin d'œil à nos jeux : sautez par-dessus les obstacles et tenez le plus longtemps possible.</p>
-        </div>
-
-        <div class="minigame__frame reveal" data-reveal>
-          <div class="minigame__hud">
-            <span>SCORE <strong id="runnerScore">0</strong></span>
-            <span>RECORD <strong id="runnerBest">0</strong></span>
-          </div>
-          <canvas id="runnerCanvas" aria-label="Mini-jeu : runner Linerve" role="img"></canvas>
-          <button class="minigame__overlay" id="runnerOverlay" type="button">
-            <span id="runnerOverlayText">Espace / ↑ / clic pour jouer</span>
-          </button>
-        </div>
       </div>
     </section>
 
