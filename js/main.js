@@ -194,13 +194,15 @@
       startGame();
     }
 
-    overlay.addEventListener('click', handleInput);
+    overlay.addEventListener('pointerdown', (e) => { e.preventDefault(); handleInput(); });
     runnerCanvas.addEventListener('pointerdown', handleInput);
     window.addEventListener('keydown', (e) => {
       if (!inView) return;
       if (e.code === 'Space' || e.code === 'ArrowUp') {
         e.preventDefault();
         handleInput();
+      } else if (e.code === 'ArrowDown') {
+        e.preventDefault();
       }
     });
 
