@@ -200,6 +200,45 @@ button { font: inherit; cursor: pointer; }
 .btn--glitch { background: linear-gradient(120deg, var(--glitch-red), var(--glitch-blue)); color: #fff; }
 .btn--glitch:hover { box-shadow: 0 14px 32px -10px rgba(255,59,48,.5); }
 
+/* ============ MINI-JEU ============ */
+.minigame { position: relative; padding: 0 0 clamp(70px, 10vw, 110px); z-index: 1; }
+.minigame__inner { display: flex; flex-direction: column; align-items: center; gap: 26px; text-align: center; }
+.minigame__title { font-size: clamp(1.5rem, 3.4vw, 2.1rem); font-weight: 600; margin: 4px 0 10px; }
+.minigame__desc { color: var(--ink-dim); max-width: 480px; margin: 0 auto; line-height: 1.6; }
+
+.minigame__frame {
+  position: relative; width: 100%; max-width: 760px;
+  border-radius: 18px; border: 1px solid rgba(255,255,255,.1);
+  background: linear-gradient(180deg, rgba(168,85,247,.06), rgba(34,211,238,.03));
+  padding: 14px; backdrop-filter: blur(6px);
+  box-shadow: 0 30px 60px -30px rgba(0,0,0,.7);
+}
+.minigame__hud {
+  display: flex; justify-content: space-between;
+  font-family: 'JetBrains Mono', monospace; font-size: .78rem; letter-spacing: .12em;
+  color: var(--ink-dim); padding: 0 6px 10px;
+}
+.minigame__hud strong { color: var(--cyan); font-size: .95rem; }
+
+#runnerCanvas {
+  display: block; width: 100%; height: 220px; border-radius: 12px;
+  background: linear-gradient(180deg, rgba(10,10,18,.9), rgba(5,5,10,.95));
+  touch-action: manipulation;
+}
+
+.minigame__overlay {
+  position: absolute; inset: 14px 14px auto 14px; top: 44px; bottom: 14px;
+  display: flex; align-items: center; justify-content: center;
+  background: rgba(5,5,10,.55); border: none; border-radius: 12px; cursor: pointer;
+  color: #fff; font-family: 'Space Grotesk', sans-serif; font-weight: 600; font-size: 1rem;
+  letter-spacing: .02em; transition: opacity .3s ease, visibility .3s ease;
+}
+.minigame__overlay span {
+  padding: 12px 22px; border-radius: 999px;
+  background: linear-gradient(120deg, var(--violet), var(--cyan)); color: #05050a;
+}
+.minigame__overlay.is-hidden { opacity: 0; visibility: hidden; pointer-events: none; }
+
 /* ============ MARQUEE ============ */
 .marquee {
   border-top: 1px solid rgba(255,255,255,.08); border-bottom: 1px solid rgba(255,255,255,.08);
@@ -236,6 +275,12 @@ button { font: inherit; cursor: pointer; }
 .pillar__num { font-family: 'JetBrains Mono', monospace; color: var(--cyan); font-size: .82rem; }
 .pillar h3 { font-size: 1.25rem; margin: 14px 0 10px; font-weight: 600; }
 .pillar p { color: var(--ink-dim); line-height: 1.6; font-size: .95rem; }
+
+.manifesto__note {
+  margin-top: 34px; padding: 18px 22px; max-width: 640px;
+  border-left: 2px solid var(--cyan); color: var(--ink-dim);
+  font-size: .92rem; line-height: 1.65; font-style: italic;
+}
 
 /* ============ SHOWCASE (shared) ============ */
 .showcase { position: relative; padding: clamp(90px, 14vw, 160px) 0; overflow: hidden; }
