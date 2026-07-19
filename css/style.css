@@ -189,6 +189,7 @@ button { font: inherit; cursor: pointer; }
   white-space: nowrap;
 }
 .btn:hover { transform: translateY(-3px); }
+.btn:focus { outline: none; box-shadow: 0 0 0 3px rgba(34,211,238,.55); }
 .btn--ghost { background: linear-gradient(120deg, var(--violet), var(--cyan)); color: #05050a; }
 .btn--ghost:hover { box-shadow: 0 12px 30px -8px rgba(168,85,247,.6); }
 .btn--outline { border-color: rgba(255,255,255,.22); color: #fff; }
@@ -229,8 +230,10 @@ button { font: inherit; cursor: pointer; }
   display: flex; align-items: center; justify-content: center;
   background: rgba(5,5,10,.5); border: none; border-radius: 0 0 10px 10px; cursor: pointer;
   transition: opacity .3s ease, visibility .3s ease, background .3s ease;
+  outline: none;
 }
 .minigame__play:hover { background: rgba(5,5,10,.32); }
+.minigame__play:focus .btn { box-shadow: 0 0 0 3px rgba(34,211,238,.55); }
 .minigame__play.is-hidden { opacity: 0; visibility: hidden; pointer-events: none; }
 
 /* ============ MARQUEE ============ */

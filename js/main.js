@@ -166,6 +166,7 @@
       resetGame();
       state = 'playing';
       overlay.classList.add('is-hidden');
+      overlay.blur();
     }
 
     function jump() {
