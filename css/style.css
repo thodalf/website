@@ -260,6 +260,35 @@ button { font: inherit; cursor: pointer; }
   z-index: 5 !important;
 }
 
+/* --- Hémicycle theme --- */
+.showcase--hemicycle .showcase__bg { filter: saturate(.75) brightness(.4); }
+.showcase--hemicycle .showcase__scrim {
+  background: linear-gradient(100deg, rgba(10,10,12,.96) 30%, rgba(10,10,12,.8) 55%, rgba(10,10,12,.94));
+}
+.showcase__title--hemicycle { font-weight: 700; color: var(--ink); }
+
+.showcase__media { position: relative; }
+.showcase__video-frame {
+  position: relative; overflow: hidden; border-radius: 14px;
+  border: 1px solid var(--line); box-shadow: 0 30px 70px -24px rgba(0,0,0,.7);
+  transition: transform .4s ease;
+}
+.showcase__media:hover .showcase__video-frame { transform: scale(1.015); }
+.showcase__video { width: 100%; aspect-ratio: 1280 / 822; object-fit: cover; display: block; background: #0d0d10; }
+.showcase__video-badge {
+  position: absolute; top: 14px; left: 14px; z-index: 2;
+  display: inline-flex; align-items: center; gap: 7px;
+  padding: 7px 13px; border-radius: 999px;
+  font-family: 'JetBrains Mono', monospace; font-size: .7rem; letter-spacing: .08em; text-transform: uppercase;
+  background: rgba(10,10,12,.65); backdrop-filter: blur(6px); color: var(--ink);
+  border: 1px solid var(--line);
+}
+.showcase__video-badge::before {
+  content: ''; width: 6px; height: 6px; border-radius: 50%; background: var(--accent);
+  animation: pulseDot 2.4s ease-in-out infinite;
+}
+@keyframes pulseDot { 0%, 100% { opacity: 1; } 50% { opacity: .35; } }
+
 /* --- Lia Dadaz Fire theme --- */
 .showcase--music { background: #0a0a0c; }
 .showcase--music .showcase__bg--static {
@@ -292,7 +321,7 @@ button { font: inherit; cursor: pointer; }
 .other-creations { padding: clamp(80px, 14vw, 160px) 0; }
 .other-creations__title { font-size: clamp(1.9rem, 5vw, 3.2rem); font-weight: 600; line-height: 1.15; max-width: 680px; margin-bottom: 40px; color: var(--ink); }
 
-.oc-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.oc-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; max-width: 800px; }
 .oc-card {
   display: flex; flex-direction: column; overflow: hidden; border-radius: 12px;
   border: 1px solid var(--line); text-decoration: none; color: inherit;
