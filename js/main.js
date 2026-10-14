@@ -3,14 +3,6 @@
 
   document.getElementById('year').textContent = new Date().getFullYear();
 
-  /* ---- Cursor glow ---- */
-  const glow = document.getElementById('cursorGlow');
-  if (glow && matchMedia('(hover: hover)').matches) {
-    window.addEventListener('pointermove', (e) => {
-      glow.style.transform = `translate(${e.clientX}px, ${e.clientY}px) translate(-50%, -50%)`;
-    }, { passive: true });
-  }
-
   /* ---- Nav scroll state + progress bar ---- */
   const nav = document.getElementById('siteNav');
   const progress = document.getElementById('scrollProgress');
@@ -73,19 +65,6 @@
     stack.addEventListener('mouseleave', () => {
       cards.forEach((card) => { card.style.transform = ''; });
     });
-  }
-
-  /* ---- Parallax on hero blobs ---- */
-  const heroBlobs = document.querySelectorAll('.hero__blob');
-  if (heroBlobs.length && matchMedia('(hover: hover)').matches) {
-    window.addEventListener('pointermove', (e) => {
-      const x = (e.clientX / window.innerWidth - 0.5) * 30;
-      const y = (e.clientY / window.innerHeight - 0.5) * 30;
-      heroBlobs.forEach((blob, i) => {
-        const factor = i === 0 ? 1 : -1;
-        blob.style.translate = `${x * factor}px ${y * factor}px`;
-      });
-    }, { passive: true });
   }
 
   /* ---- Mini-jeu : runner ---- */
@@ -269,31 +248,17 @@
       }
 
       const gy = groundY();
-      ctx.strokeStyle = 'rgba(34,211,238,0.5)';
-      ctx.shadowColor = 'rgba(34,211,238,0.6)';
-      ctx.shadowBlur = 8;
+      ctx.strokeStyle = 'rgba(201,161,90,0.45)';
       ctx.beginPath(); ctx.moveTo(0, gy + PLAYER_SIZE); ctx.lineTo(cssWidth, gy + PLAYER_SIZE); ctx.stroke();
-      ctx.shadowBlur = 0;
 
       obstacles.forEach((o) => {
         const oy = gy - o.h;
-        const grad = ctx.createLinearGradient(o.x, oy, o.x, oy + o.h);
-        grad.addColorStop(0, '#ff6b5e');
-        grad.addColorStop(1, '#2b6bff');
-        ctx.fillStyle = grad;
-        ctx.shadowColor = 'rgba(255,59,48,0.5)';
-        ctx.shadowBlur = 10;
+        ctx.fillStyle = 'rgba(234,231,226,0.55)';
         ctx.fillRect(o.x, oy, o.w, o.h);
-        ctx.shadowBlur = 0;
       });
 
       const py = player.y;
-      const pgrad = ctx.createLinearGradient(PLAYER_X, py, PLAYER_X + PLAYER_SIZE, py + PLAYER_SIZE);
-      pgrad.addColorStop(0, '#a855f7');
-      pgrad.addColorStop(1, '#22d3ee');
-      ctx.fillStyle = pgrad;
-      ctx.shadowColor = 'rgba(168,85,247,0.6)';
-      ctx.shadowBlur = 14;
+      ctx.fillStyle = '#c9a15a';
       const r = 6;
       ctx.beginPath();
       ctx.moveTo(PLAYER_X + r, py);
@@ -303,7 +268,6 @@
       ctx.arcTo(PLAYER_X, py, PLAYER_X + PLAYER_SIZE, py, r);
       ctx.closePath();
       ctx.fill();
-      ctx.shadowBlur = 0;
     }
 
     function loop(t) {
