@@ -289,6 +289,17 @@ button { font: inherit; cursor: pointer; }
 }
 @keyframes pulseDot { 0%, 100% { opacity: 1; } 50% { opacity: .35; } }
 
+/* --- Le Dernier Méridien theme --- */
+.showcase--meridien { background: #16110d; }
+.showcase--meridien .showcase__bg { filter: saturate(.8) brightness(.45); }
+.showcase--meridien .showcase__scrim {
+  background: linear-gradient(260deg, rgba(22,17,13,.95) 30%, rgba(22,17,13,.78) 55%, rgba(22,17,13,.94));
+}
+.showcase__title--meridien { font-family: 'Cinzel', serif; font-weight: 600; color: var(--ink); }
+.showcase--meridien .showcase__inner--reverse { grid-template-columns: 1.05fr .95fr; }
+.showcase--meridien .showcase__media { order: 1; }
+.showcase--meridien .showcase__text { order: 2; }
+
 /* --- Lia Dadaz Fire theme --- */
 .showcase--music { background: #0a0a0c; }
 .showcase--music .showcase__bg--static {
